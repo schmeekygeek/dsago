@@ -1,3 +1,3 @@
-module schmeeky.pages.dev/dsa
+module dsa
 
-go 1.21.0
+go 1.21
