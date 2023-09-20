@@ -84,9 +84,6 @@ func (d *DoublyLinkedList) InsertAt(item, idx int) {
 }
 
 func (d *DoublyLinkedList) RemoveAt(idx int) ( error, int ) {
-  if idx == 0 {
-
-  }
   err, node := getAt(idx, d)
   if err != nil {
     log.Fatal(err)
@@ -99,7 +96,7 @@ func (d *DoublyLinkedList) RemoveAt(idx int) ( error, int ) {
   } else {
     node.prev.next = node.next
   }
-
+  d.size--
   return err, node.value
 }
 
