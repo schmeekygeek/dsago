@@ -5,14 +5,15 @@ import "fmt"
 type Node struct {
   value     int
   next      *Node
+  prev      *Node
 }
 
-type LinkedList struct {
+type SinglyLinkedList struct {
   head    Node
   size    int
 }
 
-func (list *LinkedList) AddToLast(value int) {
+func (list *SinglyLinkedList) AddToLast(value int) {
   node := new(Node)
   if &list.head == nil {
     list.head = *node
@@ -26,7 +27,7 @@ func (list *LinkedList) AddToLast(value int) {
   list.size++
 }
 
-func (list *LinkedList) SumList() int {
+func (list *SinglyLinkedList) SumList() int {
   head := &list.head
   sum := 0
   for {
@@ -39,7 +40,7 @@ func (list *LinkedList) SumList() int {
   return sum
 }
 
-func (list *LinkedList) PrintList() {
+func (list *SinglyLinkedList) PrintList() {
   head := &list.head
   fmt.Printf("[")
   for {

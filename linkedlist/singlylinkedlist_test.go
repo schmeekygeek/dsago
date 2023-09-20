@@ -5,7 +5,7 @@ import (
 )
 
 func TestLinkedList(t *testing.T) {
-  list := new(LinkedList)
+  list := new(SinglyLinkedList)
   list.AddToLast(1)
   list.AddToLast(2)
   list.AddToLast(3)
