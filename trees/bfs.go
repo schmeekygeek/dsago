@@ -8,22 +8,24 @@ type Tree struct {
 }
 
 func (root *Tree) Bfs(n int) bool {
-  queue := make([]Tree, 0)
-  queue = append(queue, *root)
+  queue := make([]*Tree, 0)
+  queue = append(queue, root)
+
   for len(queue) != 0 {
     node := queue[0]
     queue = queue[1:]
     if node.Value == n {
       return true
     }
-    for _, val := range node.nodes {
-      queue = append(queue, *val)
+    for _, child := range node.nodes {
+      queue = append(queue, child)
     }
   }
+
   return false
 }
 
-func (root *Tree) PrintTree() bool {
+func (root *Tree) PrintTree() {
   queue := make([]Tree, 0)
   queue = append(queue, *root)
   for len(queue) != 0 {
@@ -35,5 +37,4 @@ func (root *Tree) PrintTree() bool {
     }
     fmt.Println()
   }
-  return false
 }

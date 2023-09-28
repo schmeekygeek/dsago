@@ -1,7 +1,7 @@
 package trees
 
 import (
-	"testing"
+  "testing"
 )
 
 func TestBfs(t *testing.T) {
@@ -27,5 +27,7 @@ func TestBfs(t *testing.T) {
     },
   }
   tree.PrintTree()
-  t.Log(tree.Bfs(2))
+  if !tree.Bfs(5) {
+    t.Fatal("Failed TestBfs")
+  }
 }

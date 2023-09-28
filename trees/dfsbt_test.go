@@ -7,7 +7,7 @@ import (
 
 func TestPreOrder(t *testing.T) {
   // node
-  node := createBT()
+  node := CreateBT()
 
   // expected
   expected := []int{7, 23, 5, 4, 3, 18, 21}
@@ -20,7 +20,7 @@ func TestPreOrder(t *testing.T) {
   }
 }
 
-func createBT() BinaryTree {
+func CreateBT() BinaryTree {
   node := BinaryTree{
     Left:  &BinaryTree{
       Left:  &BinaryTree{Left:  nil, Right: nil, Value: 5},
