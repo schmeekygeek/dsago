@@ -42,7 +42,6 @@ func (list *SinglyLinkedList) SumList() int {
 
 func (list *SinglyLinkedList) PrintList() {
   head := &list.head
-  fmt.Printf("[")
   for {
     if head == nil {
       break
@@ -50,5 +49,5 @@ func (list *SinglyLinkedList) PrintList() {
     fmt.Printf("%s ", fmt.Sprint(head.value))
     head = head.next
   }
-  fmt.Printf("]")
+  fmt.Println()
 }
