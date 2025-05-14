@@ -6,6 +6,6 @@ import (
 )
 
 func TestSearchBt(t *testing.T) {
-  node := CreateBT()
-  fmt.Println(searchBT(&node, 5))
+	node := CreateBT()
+	fmt.Println(searchBT(&node, 5))
 }

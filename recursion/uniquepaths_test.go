@@ -6,5 +6,5 @@ import (
 )
 
 func TestNumberOfPaths(t *testing.T) {
-  fmt.Println(uniquePaths(51, 9))
+	fmt.Println(uniquePaths(51, 9))
 }

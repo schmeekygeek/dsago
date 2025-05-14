@@ -1,18 +1,18 @@
 package recursion
 
 import (
-  "testing"
+	"testing"
 )
 
 func TestReverseString(t *testing.T) {
 
-  // expected
-  exp := "dcba"
+	// expected
+	exp := "dcba"
 
-  // got
-  got := reverse("abcd")
+	// got
+	got := reverse("abcd")
 
-  if exp != got {
-    t.Fatal("Failed reverse string")
-  }
+	if exp != got {
+		t.Fatal("Failed reverse string")
+	}
 }
