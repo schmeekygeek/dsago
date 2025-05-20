@@ -1,4 +1,4 @@
-package arrays
+package twopointers
 
 import "math"
 
